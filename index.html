@@ -35,7 +35,9 @@ nav a:hover,nav a.on{border-bottom-color:#fff;background:rgba(255,255,255,.1)}
 .kpis.small div{background:#fff;border:1px solid var(--line)}
 .kpis.small span{color:var(--navy);font-size:24px}
 .kpis.small small{color:var(--muted)}
-main{max-width:1280px;margin:0 auto;padding:24px;display:grid;gap:22px}
+main{max-width:1280px;margin:0 auto;padding:24px;display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.card{min-width:0;overflow-wrap:anywhere}
+.card a{word-break:break-word}
 .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px 30px}
 .card h2{margin:0 0 14px;color:var(--navy);font-size:24px;padding-bottom:8px;border-bottom:3px solid var(--blue);display:inline-block}
 .card h3{color:var(--navy);margin:22px 0 8px}
@@ -92,7 +94,21 @@ li.chk input:checked+span{color:var(--muted);text-decoration:line-through}
 .print-only{display:none}
 footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
 .totop{position:fixed;right:18px;bottom:18px;background:var(--red);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-@media (max-width:700px){.hero h1{font-size:28px}.card{padding:20px}.brand .sub{display:none}}
+@media (max-width:700px){
+header{position:static}html{scroll-padding-top:10px}
+.topbar{padding:6px 14px;font-size:12px}
+.brand{padding:10px 14px}.swi{height:34px}.brand .sub{display:none}
+nav .in{padding:0 6px}nav a{padding:8px 8px;font-size:13px}
+.hero .in{padding:28px 16px 24px}.hero h1{font-size:26px}.hero p{font-size:16px}
+.kpis{grid-template-columns:1fr 1fr;gap:10px}.kpis span{font-size:20px}
+.who .in{padding:18px 14px}.tiles{grid-template-columns:1fr 1fr;gap:10px}.logo{height:64px}
+main{padding:12px;gap:14px}.card{padding:18px 16px}.card h2{font-size:20px}
+.goals{grid-template-columns:1fr}.cgrid{grid-template-columns:1fr}.kpis.small{grid-template-columns:1fr 1fr}
+.toolbar{flex-direction:column;align-items:flex-start}.toolframe{height:720px}
+ul,ol{padding-left:22px}
+table{font-size:13px}th,td{padding:7px 8px}
+.tabs .tab{padding:8px 10px;font-size:13px}
+}
 
 .swi{height:44px;width:auto;display:block}
 .cover,.print-orgs{display:none}
